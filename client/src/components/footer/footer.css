@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  background-color: #264653;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+a {
+  color: #e76f51;
+}
+a:hover {
+  text-decoration: underline 2px #e76f51;
+}

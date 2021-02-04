@@ -1,0 +1,18 @@
+.about-container {
+  margin-top: 16px;
+}
+.about-title {
+  border-bottom: 6px solid #e76f51;
+  display: inline;
+}
+.employee-photo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.employee-photo img {
+  width: 100%;
+  height: auto;
+}

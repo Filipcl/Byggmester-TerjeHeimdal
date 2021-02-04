@@ -1,0 +1,8 @@
+#no modules
+node_modules
+
+#no todolist
+todo.txt
+
+#no env
+.env
