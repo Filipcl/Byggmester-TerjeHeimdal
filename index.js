@@ -53,7 +53,7 @@ app.post("/api/form", (req, res) => {
 });
 
 if (process.env.NODE_ENV === "production") {
-  app.use(static("client/build"));
+  app.use(static("/client/build"));
 }
 
 const PORT = process.env.PORT || 3001;
