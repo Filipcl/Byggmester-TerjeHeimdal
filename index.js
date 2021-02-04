@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get("/", function (res, req) {
-  res.send("Velkommen til BMH mail service");
+app.get("/", (req, res) => {
+  res.send("Velkommen til BMH Mail Server!");
 });
 
 app.post("/api/form", (req, res) => {
