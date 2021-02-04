@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Mailserver",
   "main": "index.js",
+  "engines": {
+    "node": "15.7.0"
+  },
   "scripts": {
     "start": "node index.js",
-    "build": "./client && npm run build",
-    "install-client": "./client && npm install",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
     "heroku-postbuild": " npm run install-client && npm run build",
     "server": "nodemon index.js",
     "client": "npm start --prefix ./client",
