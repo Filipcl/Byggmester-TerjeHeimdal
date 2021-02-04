@@ -11,14 +11,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Velkommen til BMH mail service");
+});
+
 app.post("/api/form", (req, res) => {
   let data = req.body;
   let smtpTransport = nodeMailer.createTransport({
+    host: "https://bmh-nettside.herokuapp.com/",
     service: "Outlook",
     port: process.env.EMAIL_PORT,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
+    },
+    tls: {
+      rejectunauthorized: false,
     },
   });
 
