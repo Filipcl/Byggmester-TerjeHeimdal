@@ -3,3 +3,16 @@
 
 #no modules
 node_modules
+
+#no env
+.env
+
+# no .eslintcache
+.eslintcache
+
+#no build
+.build
+
+#no config files
+package.json
+package-lock.json

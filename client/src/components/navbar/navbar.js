@@ -4,8 +4,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import logo from "../../images/Logo.svg";
-import InstagramIcon from "@material-ui/icons/Instagram";
 import MobileDrawer from "./drawer";
+import InstagramIcon from "@material-ui/icons/Instagram";
 
 import { Link } from "react-router-dom";
 import "./navbar.css";
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar(props) {
+function Navbar() {
   const classes = useStyles();
 
   return (
@@ -72,7 +72,8 @@ function Navbar(props) {
               </li>
               <li>
                 <a href="https://www.instagram.com/bmh.as/">
-                  <InstagramIcon />
+                  {" "}
+                  <InstagramIcon style={{ color: "#464646" }} />
                 </a>
               </li>
             </ul>

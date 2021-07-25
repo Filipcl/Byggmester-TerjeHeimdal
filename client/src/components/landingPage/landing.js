@@ -1,150 +1,82 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
-import { Grid } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import Button from "@material-ui/core/Button";
+import { Grid, Typography } from "@material-ui/core";
+import LandingPhoto from "../../images/landingPhoto.png";
 import { makeStyles } from "@material-ui/core/styles";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
   landingImage: {
-    height: "auto",
-    width: "auto",
-    maxWidth: "70%",
-    [theme.breakpoints.down("sm")]: {
-      maxWidth: "100%",
-    },
-  },
-  landingInfo: {
-    textAlign: "left",
-    listStyle: "none",
-  },
-  contactBtn: {
-    padding: "16px",
-  },
-  certificates: {
-    display: "flex",
-    justifyContent: "space-evenly",
-    backgroundImage: `url(${"https://images.unsplash.com/photo-1596367407372-96cb88503db6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"})`,
+    backgroundImage: `url(${LandingPhoto})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    padding: "2rem",
+    height: "80vh",
+    width: "100%",
   },
-  certificate: {
-    height: "180px",
-    width: "180px",
-    [theme.breakpoints.down("md")]: {
-      height: "150px",
-      width: "150px",
-    },
+  heading: {
+    position: "absolute",
+    left: "230px",
+    top: "550px",
+    color: "#f5f5f5",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "30px",
     [theme.breakpoints.down("sm")]: {
-      height: "100px",
-      width: "100px",
+      left: "0px",
+      top: "100px",
     },
-    [theme.breakpoints.down("xs")]: {
-      height: "60px",
-      width: "60px",
+  },
+  landingInfo: {
+    position: "absolute",
+    top: "577px",
+    left: "850px",
+    backgroundColor: "#f5f5f5",
+    width: "415px",
+    height: "270px",
+    opacity: "0.98",
+    boxShadow: "0px 3.84242px 3.84242px rgba(0, 0, 0, 0.25)",
+    [theme.breakpoints.down("sm")]: {
+      left: "0px",
+      top: "800px",
+      boxShadow: "none",
+      width: "100vw",
     },
+  },
+  landingInfoItem: {
+    padding: "3rem",
+    color: "#696969",
+  },
+  landingContent: {
+    backgroundColor: "#f5f5f5",
+    display: "flex",
+    width: "100vw",
+    height: "100vh",
+    textAlign: "center",
   },
 }));
 
 export default function SimpleContainer() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Grid container>
-        <Grid item xs={12}>
-          <Container maxWidth="lg">
-            <img
-              className={classes.landingImage}
-              src={
-                "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-              }
-              alt={"Landing Page"}
-            />
-          </Container>
-        </Grid>
-        <Grid item xs={12}>
-          <Container className={classes.landingInfo}>
-            <h1>Byggmester Terjeheimdal AS</h1>
-            <h2>Byggmester firma med over 30 års erfaring.</h2>
-            <h4>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              eget quam porttitor lectus dictum dignissim id pulvinar nibh. Nam
-              id nibh eu sem commodo convallis vel ac neque. Proin congue varius
-              ipsum bibendum ultricies. Cras quis tortor urna. Suspendisse
-              potenti.
-            </h4>
-            <h4>
-              Morbi ac dolor leo. Pellentesque scelerisque ex non tellus
-              dignissim, id finibus tellus fringilla. Vestibulum ante ipsum
-              primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Etiam vulputate posuere sapien ac eleifend. Vivamus gravida a est
-              at ullamcorper. Nulla facilisi.
-            </h4>
-          </Container>
-          <Container className={classes.contactBtn}>
-            <Link to={"/contact"}>
-              <Button
-                variant="outlined"
-                size="large"
-                color="primary"
-                endIcon={<MailOutlineIcon />}
-              >
-                Kontakt Oss
-              </Button>
-            </Link>
-          </Container>
+    <>
+      <Grid>
+        <img className={classes.landingImage} alt={""} />
+        <h1 className={classes.heading}>Byggmester Terje Heimdal AS</h1>
+      </Grid>
+      <Grid className={classes.landingInfo}>
+        <Grid className={classes.landingInfoItem}>
+          <Typography variant="h4">Om oss</Typography>
+          <hr style={{ margin: "16px" }} />
+          <Typography variant="paragraph">
+            Vi er en kul håndtverkbedrift som liker å hjelpe folk med å bygg hus
+            og mye mer.
+          </Typography>
         </Grid>
       </Grid>
-      <Grid container className={classes.certificates}>
-        <Grid item md={3}>
-          <div>
-            <img
-              className={classes.certificate}
-              src={
-                "https://www.byggmesterhofstad.no/wp-content/uploads/2019/03/mestermerket-BH.png"
-              }
-              alt={""}
-            />
-          </div>
-        </Grid>
-        <Grid item md={3}>
-          <div>
-            <img
-              className={classes.certificate}
-              src={
-                "https://byggmesteren.as/wp-content/uploads/2015/12/SG-merke-2016_web.jpg"
-              }
-              alt={""}
-            />
-          </div>
-        </Grid>
-        <Grid item md={3}>
-          <div>
-            <img
-              className={classes.certificate}
-              src={"https://www.byggforsk.no/Image/Display/51932"}
-              alt={""}
-            />
-          </div>
-        </Grid>
-        <Grid item md={3}>
-          <div>
-            <img
-              className={classes.certificate}
-              src={
-                "https://www.udir.no/globalassets/filer/bilder/fy/merket-bedrifter-med-laerling.png"
-              }
-              alt={""}
-            />
-          </div>
-        </Grid>
+      <Grid className={classes.landingContent}>
+        <Typography variant="h6" style={{ margin: "auto" }}>
+          Ta kontakt med oss for en uformell prat. Følg oss gjerne på instagram
+        </Typography>
       </Grid>
-    </div>
+    </>
   );
 }

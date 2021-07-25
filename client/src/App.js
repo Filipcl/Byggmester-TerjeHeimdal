@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
 import LandingPage from "./components/landingPage/landing";
@@ -9,6 +10,7 @@ import Contact from "./components/contact/contact";
 import ProjectOne from "./components/projects/projectOne";
 import ProjectTwo from "./components/projects/projectTwo";
 import ScrollToTop from "./customHook/scrollToTop";
+
 
 function App() {
   return (

@@ -1,14 +1,13 @@
 .logo {
-  height: 70px;
+  height: 50px;
 }
 
 .nav-link {
-  color: #000;
+  color: var(--primary-text-color);
   text-decoration: none;
-  text-transform: uppercase;
 }
 .nav-link:hover {
-  text-decoration: underline 4px #e76f51;
+  text-decoration: underline 1px var(--primary-text-color);
 }
 
 #home-link {
@@ -16,7 +15,7 @@
 }
 
 .MuiAppBar-colorPrimary {
-  background-color: #fff !important;
+  background-color: var(--primary-bg-color) !important;
 }
 
 @media only screen and (max-width: 600px) {

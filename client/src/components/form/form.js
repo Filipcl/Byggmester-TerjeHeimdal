@@ -88,7 +88,11 @@ export default function ContactForm() {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container
+      component="main"
+      maxWidth="xs"
+      style={{ backgroundColor: "#fff", padding: "2rem" }}
+    >
       <div>
         <Typography component="h1" variant="h5">
           Send oss en epost
@@ -160,7 +164,11 @@ export default function ContactForm() {
               type="submit"
               fullWidth
               variant="contained"
-              style={{ backgroundColor: "#e76f51", color: "#fff" }}
+              style={{
+                backgroundColor: "#e76f51",
+                color: "#fff",
+                marginTop: "1rem",
+              }}
               className={classes.submit}
             >
               Send

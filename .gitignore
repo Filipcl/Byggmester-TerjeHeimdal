@@ -1,8 +1,9 @@
 #no modules
 node_modules
 
-#no todolist
-todo.txt
-
 #no env
 .env
+
+#no config files
+package.json
+package-lock.json

@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Container, Button, Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
+/*  import InstaFeed from "../InstaFeed"; */
 import meg from "../../images/Meg.jpg";
 import "./project.css";
 
@@ -13,15 +14,8 @@ const useStyles = makeStyles((theme) => ({
       padding: "16px",
     },
   },
-  paper: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-    padding: theme.spacing(2),
-    border: "solid 3px #000",
-  },
   projectImg: {
+    height: "200px",
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
@@ -45,13 +39,14 @@ export default function Project() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12} style={{ textAlign: "start" }}>
+        <Grid item xs={12}>
           <h1>Se flere av våre prosjekter på instagram</h1>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <h3>Fremtidig instagram feed</h3>
-          </Paper>
+          <div className={classes.instagram}>
+            {/* <InstaFeed /> */}
+            <p>Her kommer Instagram Feed</p>
+          </div>
         </Grid>
       </Grid>
       <Grid container spacing={3}>
@@ -61,29 +56,29 @@ export default function Project() {
         <Grid container>
           <Grid item xs={12} sm={6} md={3}>
             <Paper className={classes.paper}>
-              <div className="employee-photo">
-                <img src={meg} alt="Ansatt" />
+              <div className="projectImg">
+                <img className={classes.projectImg} src={meg} alt="Ansatt" />
               </div>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
             <Paper className={classes.paper}>
-              <div className="employee-photo">
-                <img src={meg} alt="Ansatt" />
+              <div className="projectImg">
+                <img className={classes.projectImg} src={meg} alt="Ansatt" />
               </div>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
             <Paper className={classes.paper}>
-              <div className="employee-photo">
-                <img src={meg} alt="Ansatt" />
+              <div className="projectImg">
+                <img className={classes.projectImg} src={meg} alt="Ansatt" />
               </div>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
             <Paper className={classes.paper}>
-              <div className="employee-photo">
-                <img src={meg} alt="Ansatt" />
+              <div className="projectImg">
+                <img className={classes.projectImg} src={meg} alt="Ansatt" />
               </div>
             </Paper>
           </Grid>
@@ -135,29 +130,29 @@ export default function Project() {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <Paper className={classes.paper}>
-            <div className="employee-photo">
-              <img src={meg} alt="Ansatt" />
+            <div className="projectImg">
+              <img className={classes.projectImg} src={meg} alt="Ansatt" />
             </div>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
           <Paper className={classes.paper}>
-            <div className="employee-photo">
-              <img src={meg} alt="Ansatt" />
+            <div className="projectImg">
+              <img className={classes.projectImg} src={meg} alt="Ansatt" />
             </div>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
           <Paper className={classes.paper}>
-            <div className="employee-photo">
-              <img src={meg} alt="Ansatt" />
+            <div className="projectImg">
+              <img className={classes.projectImg} src={meg} alt="Ansatt" />
             </div>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
           <Paper className={classes.paper}>
-            <div className="employee-photo">
-              <img src={meg} alt="Ansatt" />
+            <div className="projectImg">
+              <img className={classes.projectImg} src={meg} alt="Ansatt" />
             </div>
           </Paper>
         </Grid>
