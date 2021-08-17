@@ -3,11 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import logo from "../../images/Logo.svg";
+import logo from "../../images/logo-bgc.png";
 import MobileDrawer from "./drawer";
 import InstagramIcon from "@material-ui/icons/Instagram";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
-    [theme.breakpoints.down("sm")]: {},
   },
   navItems: {
     width: "400px",
@@ -37,6 +36,20 @@ const useStyles = makeStyles((theme) => ({
       display: "block",
     },
   },
+  isActive: {
+    fontWeight: "bold",
+    borderBottom: "2px solid #422776",
+    paddingBottom: "4px",
+  },
+  navLogo: {
+    marginRight: "30rem",
+    [theme.breakpoints.down("lg")]: {
+      marginRight: "20rem",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginRight: "0px",
+    },
+  },
 }));
 
 function Navbar() {
@@ -48,7 +61,7 @@ function Navbar() {
       <AppBar>
         <Toolbar>
           <div className={classes.navbar}>
-            <Link to={"/"} className="nav-link" id="home-link">
+            <Link className={classes.navLogo} to={"/"} id="home-link">
               <img className="logo" src={logo} alt="test" />
             </Link>
             <div className={classes.burger}>
@@ -56,21 +69,33 @@ function Navbar() {
             </div>
             <ul className={classes.navItems}>
               <li className={classes.navItem}>
-                <Link to={"/about"} className="nav-link">
-                  Om oss
-                </Link>
+                <NavLink
+                  to={"/about"}
+                  className="nav-link"
+                  activeClassName={classes.isActive}
+                >
+                  Våre ansatte
+                </NavLink>
               </li>
               <li className={classes.navItem}>
-                <Link to={"/projects"} className="nav-link">
+                <NavLink
+                  to={"/projects"}
+                  className="nav-link"
+                  activeClassName={classes.isActive}
+                >
                   Prosjekter
-                </Link>
+                </NavLink>
               </li>
               <li className={classes.navItem}>
-                <Link to={"/contact"} className="nav-link">
+                <NavLink
+                  to={"/contact"}
+                  className="nav-link"
+                  activeClassName={classes.isActive}
+                >
                   Kontakt
-                </Link>
+                </NavLink>
               </li>
-              <li>
+              <li className={classes.navItem}>
                 <a href="https://www.instagram.com/bmh.as/">
                   {" "}
                   <InstagramIcon style={{ color: "#464646" }} />

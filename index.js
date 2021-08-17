@@ -28,8 +28,8 @@ app.post("/api/form", (req, res) => {
   });
 
   let mailOptions = {
-    from: '"BMH hendvendelse 🏠" <Filip.larsen@live.no>',
-    to: "Filip.larsen@live.no",
+    from: '"BMH hendvendelse 🏠" <post@bmh.as>',
+    to: "post@bmh.as",
     subject: `Nettside`,
     html: `
         <h3>Informasjon</h3>

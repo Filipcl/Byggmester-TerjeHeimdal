@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "row-reverse",
-    [theme.breakpoints.down("xs")]: {
-      width: "150px",
+    [theme.breakpoints.down("sm")]: {
+      width: "220px",
     },
   },
   appBar: {
@@ -48,9 +48,15 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    [theme.breakpoints.down("xs")]: {
+      width: "80px",
+    },
   },
   drawerPaper: {
     width: drawerWidth,
+    [theme.breakpoints.down("xs")]: {
+      width: "80px",
+    },
   },
   drawerHeader: {
     display: "flex",
@@ -125,48 +131,26 @@ export default function MobileDrawer() {
           </IconButton>
         </div>
         <Divider />
-        <List>
+        <Link to={"/"} className="nav-link" onClick={handleDrawerClose}>
           <ListItem button>
-            <ListItemText>
-              <Link to={"/"} className="nav-link" onClick={handleDrawerClose}>
-                Hjem
-              </Link>
-            </ListItemText>
+            <ListItemText>Hjem</ListItemText>
           </ListItem>
+        </Link>
+        <Link to={"/about"} className="nav-link" onClick={handleDrawerClose}>
           <ListItem button>
-            <ListItemText>
-              <Link
-                to={"/about"}
-                className="nav-link"
-                onClick={handleDrawerClose}
-              >
-                Om oss
-              </Link>
-            </ListItemText>
+            <ListItemText>Om oss</ListItemText>
           </ListItem>
-        </List>
-        <ListItem button>
-          <ListItemText>
-            <Link
-              to={"/projects"}
-              className="nav-link"
-              onClick={handleDrawerClose}
-            >
-              Prosjekter
-            </Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText>
-            <Link
-              to={"/contact"}
-              className="nav-link"
-              onClick={handleDrawerClose}
-            >
-              Kontakt
-            </Link>
-          </ListItemText>
-        </ListItem>
+        </Link>
+        <Link to={"/projects"} className="nav-link" onClick={handleDrawerClose}>
+          <ListItem button>
+            <ListItemText>Prosjekter</ListItemText>
+          </ListItem>
+        </Link>
+        <Link to={"/contact"} className="nav-link" onClick={handleDrawerClose}>
+          <ListItem button>
+            <ListItemText>Kontakt</ListItemText>
+          </ListItem>
+        </Link>
         <ListItem button>
           <ListItemText>
             <a href="https://www.instagram.com/bmh.as/">

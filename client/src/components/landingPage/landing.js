@@ -1,7 +1,13 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
-import LandingPhoto from "../../images/landingPhoto.png";
+import LandingPhoto from "../../images/bil-bakgrunn-2.jpg";
+import LandingPhoto1 from "../../images/bil.jpg";
 import { makeStyles } from "@material-ui/core/styles";
+import LandingCard from "./landingCard";
+import projectImage from "../projects/ProjectImages/husoy/20210817_094301.jpg";
+import kontaktImage from "../../images/landing_test.jpg";
+
+import { useSpring, animated } from "react-spring";
 
 const useStyles = makeStyles((theme) => ({
   landingImage: {
@@ -9,73 +15,177 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "80vh",
+    height: "90vh",
     width: "100%",
+    [theme.breakpoints.down("md")]: {
+      height: "60vh",
+      width: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "70vh",
+      width: "100%",
+      backgroundImage: `url(${LandingPhoto1})`,
+    },
   },
+
   heading: {
     position: "absolute",
-    left: "230px",
-    top: "550px",
-    color: "#f5f5f5",
-    fontStyle: "normal",
-    fontWeight: "600",
-    fontSize: "30px",
-    [theme.breakpoints.down("sm")]: {
-      left: "0px",
-      top: "100px",
-    },
-  },
-  landingInfo: {
-    position: "absolute",
-    top: "577px",
     left: "850px",
-    backgroundColor: "#f5f5f5",
-    width: "415px",
-    height: "270px",
-    opacity: "0.98",
-    boxShadow: "0px 3.84242px 3.84242px rgba(0, 0, 0, 0.25)",
+    top: "50px",
+    color: "#fff",
+    [theme.breakpoints.down("md")]: {
+      left: "0 !important",
+      bottom: "0 !important",
+      right: "0 !important",
+      margin: "auto !important",
+      top: "120px !important",
+    },
     [theme.breakpoints.down("sm")]: {
-      left: "0px",
-      top: "800px",
-      boxShadow: "none",
-      width: "100vw",
+      left: "0 !important",
+      bottom: "0 !important",
+      right: "0 !important",
+      margin: "auto !important",
+      top: "500px !important",
     },
   },
-  landingInfoItem: {
-    padding: "3rem",
-    color: "#696969",
-  },
+
   landingContent: {
-    backgroundColor: "#f5f5f5",
+    width: "80%",
+    textAlign: "left",
+    padding: "5rem",
     display: "flex",
-    width: "100vw",
-    height: "100vh",
-    textAlign: "center",
+    flexDirection: "column",
+    justifyContent: "center",
+    margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      padding: "1rem",
+    },
+  },
+  landingText: {
+    padding: "1rem 0px",
+    maxWidth: "75ch",
+  },
+  firstHeading: {
+    fontWeight: "600 !important",
+    fontSize: "32px !important",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "30px !important",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px !important",
+    },
+  },
+  secHeading: {
+    textTransform: "uppercase",
+    fontSize: "24px !important",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "20px !important",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "18px !important",
+    },
+  },
+  landingCardRoot: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    padding: "64px 200px",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      padding: "64px 32px",
+    },
+  },
+  landingCardContainer: {
+    [theme.breakpoints.down("sm")]: {
+      margin: "auto",
+      marginBottom: "32px",
+    },
   },
 }));
 
 export default function SimpleContainer() {
   const classes = useStyles();
+  const fadeProps = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    delay: 300,
+  });
+  const textFadeProps = useSpring({
+    to: { opacity: 1, left: "850px", top: "550px" },
+    from: { opacity: 0, left: "850px", top: "450px" },
+    delay: 600,
+  });
+
   return (
     <>
-      <Grid>
+      <animated.div style={fadeProps}>
         <img className={classes.landingImage} alt={""} />
-        <h1 className={classes.heading}>Byggmester Terje Heimdal AS</h1>
-      </Grid>
-      <Grid className={classes.landingInfo}>
-        <Grid className={classes.landingInfoItem}>
-          <Typography variant="h4">Om oss</Typography>
-          <hr style={{ margin: "16px" }} />
-          <Typography variant="paragraph">
-            Vi er en kul håndtverkbedrift som liker å hjelpe folk med å bygg hus
-            og mye mer.
+      </animated.div>
+      <animated.div style={textFadeProps} className={classes.heading}>
+        <Typography className={classes.firstHeading} variant="h2">
+          MED FOKUS PÅ
+          <br />
+          <Typography className={classes.secHeading} variant="h4">
+            HØY KVALITET OG GODE KUNDEOPPLEVELSER
           </Typography>
-        </Grid>
-      </Grid>
-      <Grid className={classes.landingContent}>
-        <Typography variant="h6" style={{ margin: "auto" }}>
-          Ta kontakt med oss for en uformell prat. Følg oss gjerne på instagram
         </Typography>
+      </animated.div>
+      <Grid className={classes.landingContent}>
+        <Typography className={classes.landingText} variant="h4">
+          Om oss
+        </Typography>
+        <Typography className={classes.landingText} variant="body1">
+          Byggmester Terje Heimdal holder til på Nøtterøy, og ble etablert i
+          2007. De fleste av våre oppdrag er i kommunene Færder og Tønsberg, men
+          får stadig flere prosjekter andre steder på Østlandet.
+          <br />
+          <br />
+          Firmaet har 6 ansatte med høy kompetanse og lang erfaring innen
+          byggfaget. Vi utfører oppdrag som nybygg, tilbygg, restaurering, bad,
+          tak med mere, med fokus på{" "}
+          <span style={{ fontWeight: "bold" }}>kvalitet</span> og{" "}
+          <span style={{ fontWeight: "bold" }}>leveringstid.</span>
+          <br />
+          <br />
+          Vi kan tilby deg en totalpakke med tømrer, rørlegger og elektriker
+          <br />
+          <br />
+          Byggmester Terje Heimdal har Sentral godkjenning for ansvarsrett, er
+          godkjent våtroms-og lærling bedrift.
+        </Typography>
+      </Grid>
+      <Grid
+        style={{
+          backgroundColor: "#E7E7E7",
+          color: "#464646",
+          padding: "32px",
+        }}
+      >
+        <Typography variant="h6">
+          "Fornøyde kunder som utfordrer oss i hverdagen, er med på å skape vårt
+          rykte og renomé.
+          <br />
+          Derfor vil vi alltid ha fokus på høy kvalitet for at du som kunde skal
+          være fornøyd!"
+        </Typography>
+      </Grid>
+      <Grid className={classes.landingCardRoot}>
+        <Grid item className={classes.landingCardContainer}>
+          <LandingCard
+            img={projectImage}
+            title="Se våre prosjekter"
+            content="God kompetanse og kunnskap gir trygghet"
+            linkTo="/projects"
+          />
+        </Grid>
+        <Grid item className={classes.landingCardContainer}>
+          <LandingCard
+            img={kontaktImage}
+            title="Ta kontakt med oss"
+            content="Vi hjelper deg å realisere  ditt byggeprojekt "
+            linkTo="/contact"
+          />
+        </Grid>
       </Grid>
     </>
   );

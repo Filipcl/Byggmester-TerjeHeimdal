@@ -1,22 +1,27 @@
 import React from "react";
 import "./footer.css";
-import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
 
 import Ansvarsrett from "../../images/ansvarsrett.png";
-import LogoSmall from "../../images/logoSmall.png";
 import Byggmester from "../../images/byggmester.png";
+import Vaatrom from "../../images/vaatrom.png";
 import Lærling from "../../images/lærling.png";
-import Byggmesterforbundet from "../../images/byggmesterforbund.png";
+import MailIcon from "@material-ui/icons/Mail";
+import PhoneIcon from "@material-ui/icons/Phone";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
     width: "100%",
+    height: "135px",
     backgroundColor: "#F5F5F5",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     padding: "1rem",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
   },
   brands: {
     display: "flex",
@@ -26,25 +31,38 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "2rem",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
+      padding: 0,
     },
   },
   brand: {
-    paddingLeft: "5rem",
+    paddingLeft: "2rem",
     [theme.breakpoints.down("sm")]: {
-      paddingLeft: "1rem",
-    },
-  },
-  smallLogo: {
-    marginLeft: "2rem",
-    [theme.breakpoints.down("sm")]: {
-      margin: 0,
+      padding: "0px",
     },
   },
   footerImages: {
     height: "70px",
+  },
+  footerIcons: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    marginLeft: "64px",
     [theme.breakpoints.down("sm")]: {
-      height: "40px",
+      margin: "auto",
     },
+  },
+  FooterIcon: {
+    margin: "0px 10px",
+    width: "18px",
+    height: "18px",
+  },
+  FooterInfo: {
+    display: "flex",
+    alignItems: "center",
+    flexWrap: "wrap",
+    flexDirection: "row",
+    margin: "8px 0px",
   },
 }));
 
@@ -52,50 +70,54 @@ export default function Footer() {
   const classes = useStyles();
   return (
     <>
-      <Divider />
+      <hr />
       <footer className={classes.footer}>
-        <img
-          src={LogoSmall}
-          alt="Liten logo"
-          className={classes.footerImages}
-        />
-        <ul className={classes.brands}>
-          <li className={classes.brand}>
-            <img
-              src={Byggmesterforbundet}
-              alt="byggmesterforbundet"
-              className={classes.footerImages}
-            />
-          </li>
-          <li className={classes.brand}>
-            <img src={Lærling} alt="lærling" className={classes.footerImages} />
-          </li>
-          <li className={classes.brand}>
-            <img
-              src={Ansvarsrett}
-              alt="ansvarsrett"
-              className={classes.footerImages}
-            />
-          </li>
-          <li className={classes.brand}>
-            <img
-              src={Byggmester}
-              alt="Byggmester"
-              className={classes.footerImages}
-            />
-          </li>
-        </ul>
-
-        {/*<a href="https://www.instagram.com/bmh.as/">
-          <InstagramIcon />
-        </a>
-        <Typography variant="h6">
-          <a href="mailto:martin@bmh.as">Send Feedback</a>
-        </Typography>
-
-        <Typography variant="body2">
-          Copyright © <a href="http://www.filiplarsen.com">Filip Larsen</a> 2021
-        </Typography>*/}
+        <div className={classes.footerIcons}>
+          <div className={classes.FooterInfo}>
+            <MailIcon className={classes.FooterIcon} />
+            <a className="nav-link" href="mailto:post@bmh.no">
+              post@bmh.no
+            </a>
+          </div>
+          <div className={classes.FooterInfo}>
+            <PhoneIcon className={classes.FooterIcon} />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <Typography variant="body1">+47 402 00 499</Typography>
+            </div>
+          </div>
+        </div>
+        <div style={{ marginTop: "auto", marginBottom: "auto" }}>
+          <ul className={classes.brands}>
+            <li className={classes.brand}>
+              <img
+                src={Vaatrom}
+                alt="Våtrom"
+                className={classes.footerImages}
+              />
+            </li>
+            <li className={classes.brand}>
+              <img
+                src={Lærling}
+                alt="lærling"
+                className={classes.footerImages}
+              />
+            </li>
+            <li className={classes.brand}>
+              <img
+                src={Ansvarsrett}
+                alt="ansvarsrett"
+                className={classes.footerImages}
+              />
+            </li>
+            <li className={classes.brand}>
+              <img
+                src={Byggmester}
+                alt="Byggmester"
+                className={classes.footerImages}
+              />
+            </li>
+          </ul>
+        </div>
       </footer>
     </>
   );

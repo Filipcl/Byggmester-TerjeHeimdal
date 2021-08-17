@@ -1,4 +1,4 @@
-.about-container {
+/* .about-container {
   margin-top: 16px;
 }
 .about-title {
@@ -19,4 +19,9 @@
 
 .MuiAccordionSummary-root {
   display: inline !important;
+}
+ */
+
+#martin {
+  margin-bottom: 24px !important;
 }

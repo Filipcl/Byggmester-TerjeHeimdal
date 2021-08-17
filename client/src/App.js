@@ -7,10 +7,11 @@ import Footer from "./components/footer/footer";
 import Project from "./components/projects/project";
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
-import ProjectOne from "./components/projects/projectOne";
-import ProjectTwo from "./components/projects/projectTwo";
+import ProjectOne from "./components/projects/projectPages/projectOne";
+import ProjectTwo from "./components/projects/projectPages/projectTwo";
+import ProjectThree from "./components/projects/projectPages/projectThree";
+import ProjectFour from "./components/projects/projectPages/projectFour";
 import ScrollToTop from "./customHook/scrollToTop";
-
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/projectOne" component={ProjectOne} />
           <Route path="/projectTwo" component={ProjectTwo} />
+          <Route path="/projectThree" component={ProjectThree} />
+          <Route path="/projectFour" component={ProjectFour} />
         </Switch>
         <Footer />
       </Router>

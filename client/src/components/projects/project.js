@@ -1,34 +1,46 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Container, Button, Paper } from "@material-ui/core";
-import { Link } from "react-router-dom";
-/*  import InstaFeed from "../InstaFeed"; */
-import meg from "../../images/Meg.jpg";
+import { Grid, Typography } from "@material-ui/core";
+import cover from "./ProjectImages/funky/first.jpg";
+import totcover from "./ProjectImages/total/cover.jpg";
+import tjomecover from "./ProjectImages/tjome/IMG_20200427_092936.jpg";
+import husoycover from "./ProjectImages/husoy/20210817_094301.jpg";
+import ProjectCard from "./projectComponents/projectCard";
 import "./project.css";
+/*  import InstaFeed from "../InstaFeed"; */
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: "5rem",
+    padding: "64px 24px 24px",
     [theme.breakpoints.down("xs")]: {
       padding: "16px",
     },
   },
-  projectImg: {
-    height: "200px",
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
+  projectContainer: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "84px !important",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      marginTop: "40px",
     },
   },
-  projectContent: {
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
+  projectImg: {
+    width: "442px",
+    height: "249px",
+    [theme.breakpoints.down("sm")]: {
+      width: "320px",
+      height: "180px",
     },
   },
   projectButton: {
-    display: "none",
-    [theme.breakpoints.down("xs")]: {
-      display: "block",
+    paddingTop: " 84px",
+    display: "flex",
+    justifyContent: "end",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "16px",
+      justifyContent: "center",
     },
   },
 }));
@@ -38,162 +50,66 @@ export default function Project() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid container>
         <Grid item xs={12}>
-          <h1>Se flere av våre prosjekter på instagram</h1>
+          <Typography variant="h4">Våre prosjekter</Typography>
+          <Typography variant="body1" style={{ padding: "24px 0px" }}>
+            Her kan du se noen av våre prosjekter. Følg oss på{" "}
+            <a
+              href="https://www.instagram.com/bmh.as/"
+              style={{ color: "black", fontWeight: "600" }}
+            >
+              Instagram
+            </a>{" "}
+            for flere videoer og bilder.
+          </Typography>
+          <hr style={{ color: "#422776", width: "80%" }} />
         </Grid>
-        <Grid item xs={12}>
-          <div className={classes.instagram}>
-            {/* <InstaFeed /> */}
-            <p>Her kommer Instagram Feed</p>
-          </div>
+        <Grid className={classes.projectContainer} item xs={12}>
+          <ProjectCard
+            img={cover}
+            title="Ny enebolig i funkis stil på Nøtterøy "
+            content="Arkitekttegnet bolig med mange spennende løsninger (buet trappeløp) og fine detaljer. Kombinasjon av mur og treverk. Det er benyttet vedlikeholdsfrie vinduer og kledning, listefritt innvendig med slette vegger og vannbåren varme i alle gulv."
+            linktoProject="./projectOne"
+          />
         </Grid>
-      </Grid>
-      <Grid container spacing={3}>
-        <Grid item xs={12} style={{ textAlign: "start" }}>
-          <h1>Hytte på Veierland</h1>
+        <Grid className={classes.projectContainer} item xs={12}>
+          <ProjectCard
+            img={husoycover}
+            title="Totalrenovering/ny enebolig på Husøy"
+            content="Et spennende prosjekt på vinterstid hvor store deler av arbeidet
+            ble utført under tak, upåvirket av vær og vind. Rivd mesteparten
+            av gammel bygning fra 1800 tallet, og benyttet noe av tømmeret
+            innvendig for å bevare historien. Bygd i gammel stil med takstein
+            i tegl og renner og nedløp i zink. Dette ble kombinert med nytt og
+            moderne stolpeløst glassrekkverk."
+            linktoProject="./projectThree"
+          />
         </Grid>
-        <Grid container>
-          <Grid item xs={12} sm={6} md={3}>
-            <Paper className={classes.paper}>
-              <div className="projectImg">
-                <img className={classes.projectImg} src={meg} alt="Ansatt" />
-              </div>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
-            <Paper className={classes.paper}>
-              <div className="projectImg">
-                <img className={classes.projectImg} src={meg} alt="Ansatt" />
-              </div>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
-            <Paper className={classes.paper}>
-              <div className="projectImg">
-                <img className={classes.projectImg} src={meg} alt="Ansatt" />
-              </div>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
-            <Paper className={classes.paper}>
-              <div className="projectImg">
-                <img className={classes.projectImg} src={meg} alt="Ansatt" />
-              </div>
-            </Paper>
-          </Grid>
+        <Grid className={classes.projectContainer} item xs={12}>
+          <ProjectCard
+            img={totcover}
+            title="Tilbygg og totalrenovering av hytte i Drøbak "
+            content=" Tilbygg med 2 bad og soverom og totalrenovering av resten av
+            hytta. Det ble benyttet vedlikeholdsfri kledning, falsede
+            aluminiumsplater på tak med lekre detaljer som pipehatt og
+            takrenner i zink. Fliselagt bad med historiske gulvflis og
+            rennesluk mot vegg. Glassrekkverk på balkong med fotklemmer i
+            syrefast stål."
+            linktoProject="./projectTwo"
+          />
         </Grid>
-
-        <Grid item xs={12} className={classes.projectContent}>
-          <Paper className={classes.paper}>
-            <Container>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                laoreet pellentesque sem non molestie. Pellentesque at bibendum
-                enim. Donec in ante nunc. Phasellus vel lacus quis odio sagittis
-                malesuada ac ut lorem. Integer semper fringilla turpis ut
-                varius. Mauris rhoncus dolor dui, ut aliquet ex pharetra ac.
-                Pellentesque sed lacinia justo. Vivamus urna nisi, lacinia vel
-                magna vitae, congue consectetur tortor. Quisque lectus metus,
-                dictum quis rutrum tincidunt, blandit in turpis. Duis a congue
-                quam, ut pulvinar tortor. Aliquam massa eros, ultricies ac enim
-                nec, placerat tristique metus. Nunc est augue, fermentum et
-                dictum eget, imperdiet et turpis. Suspendisse aliquet.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                laoreet pellentesque sem non molestie. Pellentesque at bibendum
-                enim. Donec in ante nunc. Phasellus vel lacus quis odio sagittis
-                malesuada ac ut lorem. Integer semper fringilla turpis ut
-                varius. Mauris rhoncus dolor dui, ut aliquet ex pharetra ac.
-                Pellentesque sed lacinia justo. Vivamus urna nisi, lacinia vel
-                magna vitae, congue consectetur tortor. Quisque lectus metus,
-                dictum quis rutrum tincidunt, blandit in turpis. Duis a congue
-                quam, ut pulvinar tortor. Aliquam massa eros, ultricies ac enim
-                nec, placerat tristique metus. Nunc est augue, fermentum et
-                dictum eget, imperdiet et turpis. Suspendisse aliquet.
-              </p>
-            </Container>
-          </Paper>
-        </Grid>
-        <Grid container className={classes.projectButton}>
-          <Link to={"/projectOne"}>
-            <Button variant="outlined" size="large" color="primary">
-              Les mer om prosjektet
-            </Button>
-          </Link>
-        </Grid>
-      </Grid>
-      <Grid container spacing={3}>
-        <Grid item xs={12} style={{ textAlign: "start" }}>
-          <h1>Hytte i Drøbak</h1>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper className={classes.paper}>
-            <div className="projectImg">
-              <img className={classes.projectImg} src={meg} alt="Ansatt" />
-            </div>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
-          <Paper className={classes.paper}>
-            <div className="projectImg">
-              <img className={classes.projectImg} src={meg} alt="Ansatt" />
-            </div>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
-          <Paper className={classes.paper}>
-            <div className="projectImg">
-              <img className={classes.projectImg} src={meg} alt="Ansatt" />
-            </div>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} className={classes.projectImg}>
-          <Paper className={classes.paper}>
-            <div className="projectImg">
-              <img className={classes.projectImg} src={meg} alt="Ansatt" />
-            </div>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} className={classes.projectContent}>
-          <Paper className={classes.paper}>
-            <Container>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                laoreet pellentesque sem non molestie. Pellentesque at bibendum
-                enim. Donec in ante nunc. Phasellus vel lacus quis odio sagittis
-                malesuada ac ut lorem. Integer semper fringilla turpis ut
-                varius. Mauris rhoncus dolor dui, ut aliquet ex pharetra ac.
-                Pellentesque sed lacinia justo. Vivamus urna nisi, lacinia vel
-                magna vitae, congue consectetur tortor. Quisque lectus metus,
-                dictum quis rutrum tincidunt, blandit in turpis. Duis a congue
-                quam, ut pulvinar tortor. Aliquam massa eros, ultricies ac enim
-                nec, placerat tristique metus. Nunc est augue, fermentum et
-                dictum eget, imperdiet et turpis. Suspendisse aliquet.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                laoreet pellentesque sem non molestie. Pellentesque at bibendum
-                enim. Donec in ante nunc. Phasellus vel lacus quis odio sagittis
-                malesuada ac ut lorem. Integer semper fringilla turpis ut
-                varius. Mauris rhoncus dolor dui, ut aliquet ex pharetra ac.
-                Pellentesque sed lacinia justo. Vivamus urna nisi, lacinia vel
-                magna vitae, congue consectetur tortor. Quisque lectus metus,
-                dictum quis rutrum tincidunt, blandit in turpis. Duis a congue
-                quam, ut pulvinar tortor. Aliquam massa eros, ultricies ac enim
-                nec, placerat tristique metus. Nunc est augue, fermentum et
-                dictum eget, imperdiet et turpis. Suspendisse aliquet.
-              </p>
-            </Container>
-          </Paper>
-        </Grid>
-        <Grid container className={classes.projectButton}>
-          <Link to={"/projectTwo"}>
-            <Button variant="outlined" size="large" color="primary">
-              Les mer om prosjektet
-            </Button>
-          </Link>
+        <Grid className={classes.projectContainer} item xs={12}>
+          <ProjectCard
+            img={tjomecover}
+            title="Totalrenovering med tilbygg hytte på Tjøme"
+            content="Tilbygg ny stue og inngangsparti og renovering av gammel hytte.
+            Tømmermannskledning utvendig, tre panel og panelplater innvendig,
+            slett himling av gips og nytt bad med våtromsplater og belegg. Fin
+            løsning med hems over utvendig bod i tilknytning til soverom. Ny
+            trapp opp til eiendommen."
+            linktoProject="./projectFour"
+          />
         </Grid>
       </Grid>
     </div>
