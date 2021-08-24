@@ -116,8 +116,7 @@ export default function MobileForm(props) {
                 autoComplete="name"
                 name="Navn"
                 variant="outlined"
-                label="Fultnavn"
-                autoFocus
+                label="Fullt navn"
                 inputRef={register}
                 error={!!errors.Navn}
                 helperText={errors?.Navn?.message}
@@ -136,7 +135,6 @@ export default function MobileForm(props) {
                 id="input-with-icon-textfield"
                 label="Ditt telefon nummer"
                 variant="outlined"
-                id="phone"
                 name="phone"
                 autoComplete="phone"
                 inputRef={register}
@@ -154,7 +152,6 @@ export default function MobileForm(props) {
                 className={classes.margin}
                 id="input-with-icon-textfield"
                 variant="outlined"
-                id="email"
                 label="Din e-postadresse"
                 name="Email"
                 autoComplete="email"

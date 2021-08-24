@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Avatar } from "@material-ui/core";
 import MailIcon from "@material-ui/icons/Mail";
@@ -39,14 +39,6 @@ const useStyles = makeStyles({
 
 export default function EmployeeCard(props) {
   const classes = useStyles();
-  const [isEmpty, setEmpty] = useState(false);
-  CheckPhone();
-
-  function CheckPhone(props) {
-    if (props === "") {
-      setEmpty(true);
-    }
-  }
 
   return (
     <div className={classes.card}>
@@ -81,7 +73,7 @@ export default function EmployeeCard(props) {
           <div className={classes.cardInfo}>
             <MailIcon className={classes.cardIcon} />
             <Typography
-              style={{ fontSize: "12px", fontWeight: 400 }}
+              style={{ fontSize: "11px", fontWeight: 500 }}
               variant="body1"
             >
               E-post: {props.mail}

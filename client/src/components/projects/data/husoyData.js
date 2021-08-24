@@ -4,7 +4,6 @@ import third from "../ProjectImages/husoy/20190503_153318.jpg";
 import fourth from "../ProjectImages/husoy/20190503_153330.jpg";
 import fifth from "../ProjectImages/husoy/20190503_153343.jpg";
 import sixth from "../ProjectImages/husoy/20190503_153412.jpg";
-import eighth from "../ProjectImages/husoy/20190507_141428.jpg";
 import nineth from "../ProjectImages/husoy/20190508_115402.jpg";
 import tenth from "../ProjectImages/husoy/20190508_115410.jpg";
 import elleventh from "../ProjectImages/husoy/20191122_175739.jpg";
@@ -15,14 +14,21 @@ import fifthteen from "../ProjectImages/husoy/20210817_094320.jpg";
 import sixteen from "../ProjectImages/husoy/DSC_0150.jpg";
 import seventeen from "../ProjectImages/husoy/innetak.jpg";
 
+import eightteen from "../ProjectImages/husoy/20210817_094247.jpg";
+
 export const husoyData = [
   {
-    img: first,
+    img: eightteen,
     title: "Image",
     cols: 2,
   },
   {
-    img: sec,
+    img: fourteen,
+    title: "Image",
+    cols: 2,
+  },
+  {
+    img: fifthteen,
     title: "Image",
     cols: 2,
   },
@@ -46,11 +52,7 @@ export const husoyData = [
     title: "Image",
     cols: 2,
   },
-  {
-    img: eighth,
-    title: "Image",
-    cols: 2,
-  },
+
   {
     img: nineth,
     title: "Image",
@@ -76,16 +78,7 @@ export const husoyData = [
     title: "Image",
     cols: 2,
   },
-  {
-    img: fourteen,
-    title: "Image",
-    cols: 2,
-  },
-  {
-    img: fifthteen,
-    title: "Image",
-    cols: 2,
-  },
+
   {
     img: sixteen,
     title: "Image",
@@ -93,6 +86,16 @@ export const husoyData = [
   },
   {
     img: seventeen,
+    title: "Image",
+    cols: 2,
+  },
+  {
+    img: first,
+    title: "Image",
+    cols: 2,
+  },
+  {
+    img: sec,
     title: "Image",
     cols: 2,
   },

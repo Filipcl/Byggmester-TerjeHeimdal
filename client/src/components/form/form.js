@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
-    justifyContent: "spaceBetween",
     boxShadow: "0px 20px 25px rgba(0,0,0,0.15)",
     [theme.breakpoints.down("md")]: {
       top: "0px",
@@ -233,7 +232,6 @@ export default function ContactForm(props) {
                 id="input-with-icon-textfield"
                 label="Ditt telefon nummer"
                 variant="outlined"
-                id="phone"
                 name="phone"
                 autoComplete="phone"
                 inputRef={register}
@@ -251,7 +249,6 @@ export default function ContactForm(props) {
                 className={classes.margin}
                 id="input-with-icon-textfield"
                 variant="outlined"
-                id="email"
                 label="Din e-postadresse"
                 name="Email"
                 autoComplete="email"

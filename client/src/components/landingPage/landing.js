@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import LandingPhoto from "../../images/bil-bakgrunn-2.jpg";
-import LandingPhoto1 from "../../images/bil.jpg";
+/* import LandingPhoto1 from "../../images/bil.jpg"; */
 import { makeStyles } from "@material-ui/core/styles";
 import LandingCard from "./landingCard";
 import projectImage from "../projects/ProjectImages/husoy/20210817_094301.jpg";
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: "70vh",
       width: "100%",
-      backgroundImage: `url(${LandingPhoto1})`,
+      /* backgroundImage: `url(${LandingPhoto})`, */
     },
   },
 
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
       bottom: "0 !important",
       right: "0 !important",
       margin: "auto !important",
-      top: "500px !important",
+      top: "450px !important",
     },
   },
 
@@ -135,23 +135,33 @@ export default function SimpleContainer() {
           Om oss
         </Typography>
         <Typography className={classes.landingText} variant="body1">
-          Byggmester Terje Heimdal holder til på Nøtterøy, og ble etablert i
-          2007. De fleste av våre oppdrag er i kommunene Færder og Tønsberg, men
-          får stadig flere prosjekter andre steder på Østlandet.
+          Byggmester Terje Heimdal AS holder til på Nøtterøy, og ble etablert i
+          2007. De fleste av våre oppdrag er på fastlandet i kommunene Færder og
+          Tønsberg. Vi har også lang erfaring med arbeid på øyene i skjærgården
+          – hvor vi har raske og effektive transportløsninger.
           <br />
           <br />
-          Firmaet har 6 ansatte med høy kompetanse og lang erfaring innen
-          byggfaget. Vi utfører oppdrag som nybygg, tilbygg, restaurering, bad,
-          tak med mere, med fokus på{" "}
-          <span style={{ fontWeight: "bold" }}>kvalitet</span> og{" "}
-          <span style={{ fontWeight: "bold" }}>leveringstid.</span>
+          De siste årene har vi utført flere prosjekter andre steder på
+          Østlandet, blant annet totalrehabilitering av enebolig i Oslo,
+          ombygging hytte Drøbak, takomlegging hytte Veggli og nytt kjøkken og
+          stue i Asker.
           <br />
           <br />
-          Vi kan tilby deg en totalpakke med tømrer, rørlegger og elektriker
+          Våre ansatte har høy kompetanse og lang erfaring innen byggfaget. Vi
+          utfører oppdrag som nybygg, tilbygg, restaurering, bad, tak med mere,
+          med{" "}
+          <span style={{ fontWeight: "bold" }}>
+            fokus på høy kvalitet og gode kundeopplevelser.
+          </span>{" "}
           <br />
           <br />
-          Byggmester Terje Heimdal har Sentral godkjenning for ansvarsrett, er
-          godkjent våtroms-og lærling bedrift.
+          Vi samarbeider med bedrifter innen fagområdene rørlegger, elektriker,
+          maler og grunnarbeider, slik at vi kan være din totalleverandør.
+          <br />
+          <br />
+          Byggmester Terje Heimdal har Sentral godkjenning for ansvarsrett, og
+          lærling bedrift. Vi har kontinuerlig nye lærlinger hos oss, for å
+          sikre fremtidig rekruttering til tømrerfaget.
         </Typography>
       </Grid>
       <Grid
@@ -165,7 +175,7 @@ export default function SimpleContainer() {
           "Fornøyde kunder som utfordrer oss i hverdagen, er med på å skape vårt
           rykte og renomé.
           <br />
-          Derfor vil vi alltid ha fokus på høy kvalitet for at du som kunde skal
+          Derfor har vi alltid fokus på høy kvalitet, for at du som kunde skal
           være fornøyd!"
         </Typography>
       </Grid>

@@ -69,7 +69,7 @@ export default function Project() {
           <ProjectCard
             img={cover}
             title="Ny enebolig i funkis stil på Nøtterøy "
-            content="Arkitekttegnet bolig med mange spennende løsninger (buet trappeløp) og fine detaljer. Kombinasjon av mur og treverk. Det er benyttet vedlikeholdsfrie vinduer og kledning, listefritt innvendig med slette vegger og vannbåren varme i alle gulv."
+            content="Arkitekttegnet bolig med mange spennende løsninger (buet trappeløp) og fine detaljer. Kombinasjon av mur og treverk. Det er benyttet vedlikeholdsfrie vinduer og kledning, listefritt innvendig med slette vegger og vannbåren varme i alle gulv. "
             linktoProject="./projectOne"
           />
         </Grid>
@@ -77,25 +77,18 @@ export default function Project() {
           <ProjectCard
             img={husoycover}
             title="Totalrenovering/ny enebolig på Husøy"
-            content="Et spennende prosjekt på vinterstid hvor store deler av arbeidet
-            ble utført under tak, upåvirket av vær og vind. Rivd mesteparten
-            av gammel bygning fra 1800 tallet, og benyttet noe av tømmeret
-            innvendig for å bevare historien. Bygd i gammel stil med takstein
-            i tegl og renner og nedløp i zink. Dette ble kombinert med nytt og
-            moderne stolpeløst glassrekkverk."
+            content="Et spennende prosjekt på vinterstid hvor store deler av arbeidet ble utført under tak, upåvirket av vær og vind. Rivd mesteparten av gammel bygning fra 1800 tallet, og benyttet noe av tømmeret innvendig for å bevare historien.
+            Bygd i gammel stil med takstein i tegl og renner og nedløp i zink. Dette ble kombinert med nytt og moderne stolpeløst glassrekkverk.
+            "
             linktoProject="./projectThree"
           />
         </Grid>
         <Grid className={classes.projectContainer} item xs={12}>
           <ProjectCard
             img={totcover}
-            title="Tilbygg og totalrenovering av hytte i Drøbak "
-            content=" Tilbygg med 2 bad og soverom og totalrenovering av resten av
-            hytta. Det ble benyttet vedlikeholdsfri kledning, falsede
-            aluminiumsplater på tak med lekre detaljer som pipehatt og
-            takrenner i zink. Fliselagt bad med historiske gulvflis og
-            rennesluk mot vegg. Glassrekkverk på balkong med fotklemmer i
-            syrefast stål."
+            title="Tilbygg og totalrenovering av hytte i Drøbak"
+            content=" Tilbygg med 2 bad og soverom og totalrenovering av resten av hytta. Det ble benyttet vedlikeholdsfri kledning, falsede aluminiumsplater på tak med lekre detaljer som pipehatt og takrenner i zink.
+            Fliselagt bad med historiske gulvflis og rennesluk mot vegg. Glassrekkverk på balkong med fotklemmer i syrefast stål."
             linktoProject="./projectTwo"
           />
         </Grid>

@@ -8,7 +8,6 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import Martin from "../../images/ansatte/martin.JPG";
 import Terje from "../../images/ansatte/terje.JPG";
 import Nikolai from "../../images/ansatte/nikolai.jpg";
-import Steinar from "../../images/ansatte/steinar.JPG";
 import ansatt1 from "../../images/ansatte/ansatt1.JPG";
 import ansatt2 from "../../images/ansatte/ansatt2.JPG";
 import ansatt3 from "../../images/ansatte/ansatt3.JPG";
@@ -27,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "64px 24px 24px",
     [theme.breakpoints.down("sm")]: {
       padding: 0,
+      paddingBottom: "64px !important",
     },
   },
   cardContainer: {
@@ -54,8 +54,8 @@ export default function About() {
       <Grid item xs={12}>
         <Typography variant="h4">Våre ansatte</Typography>
         <Typography variant="body1" style={{ padding: "24px 0px" }}>
-          Vi er en gjeng med tømrere stasjonert i ferder kommune. Vi har ulik
-          spisskometanse og tar tilbud Vestfold og Oslo.
+          Medarbeiderne våre har høy kompetanse og lang erfaring innen
+          byggfaget, og klare for flere oppdrag på Østlandsområdet.
         </Typography>
         <hr style={{ color: "#422776", width: "80%", marginBottom: "64px" }} />
       </Grid>
@@ -77,7 +77,7 @@ export default function About() {
                 </Typography>
               </div>
             }
-            mail={"matin@bmh.as"}
+            mail={"martin@bmh.as"}
           />
         </Grid>
         <Grid item className={classes.cardContainer}>
@@ -85,7 +85,17 @@ export default function About() {
             img={Terje}
             name={"Terje Heimdal"}
             stilling={"Byggmester"}
-            tlf={""}
+            tlf={
+              <div className={classes.cardInfo}>
+                <PhoneIcon className={classes.cardIcon} />
+                <Typography
+                  style={{ fontSize: "12px", fontWeight: 400 }}
+                  variant="body1"
+                >
+                  +47 974 89 186
+                </Typography>
+              </div>
+            }
             mail={"terje@bmh.as"}
           />
         </Grid>
@@ -94,7 +104,17 @@ export default function About() {
             img={ansatt1}
             name={"Remi Alvestad"}
             stilling={"Tømrer"}
-            tlf={""}
+            tlf={
+              <div className={classes.cardInfo}>
+                <PhoneIcon className={classes.cardIcon} />
+                <Typography
+                  style={{ fontSize: "12px", fontWeight: 400 }}
+                  variant="body1"
+                >
+                  +47 988 62 408
+                </Typography>
+              </div>
+            }
             mail={"remi@bmh.as"}
           />
         </Grid>
@@ -103,7 +123,17 @@ export default function About() {
             img={ansatt2}
             name={"Anders Ljone"}
             stilling={"Tømrer"}
-            tlf={""}
+            tlf={
+              <div className={classes.cardInfo}>
+                <PhoneIcon className={classes.cardIcon} />
+                <Typography
+                  style={{ fontSize: "12px", fontWeight: 400 }}
+                  variant="body1"
+                >
+                  +47 918 71 787
+                </Typography>
+              </div>
+            }
             mail={"anders@bmh.as"}
           />
         </Grid>
@@ -112,7 +142,17 @@ export default function About() {
             img={Nikolai}
             name={"Nikolai Andersen"}
             stilling={"Lærling"}
-            tlf={""}
+            tlf={
+              <div className={classes.cardInfo}>
+                <PhoneIcon className={classes.cardIcon} />
+                <Typography
+                  style={{ fontSize: "12px", fontWeight: 400 }}
+                  variant="body1"
+                >
+                  +47 988 47 284
+                </Typography>
+              </div>
+            }
             mail={"nikolai@bmh.as"}
           />
         </Grid>
@@ -121,16 +161,26 @@ export default function About() {
             img={ansatt3}
             name={"Tobias Sakariassen "}
             stilling={"Tømrer"}
-            tlf={""}
+            tlf={
+              <div className={classes.cardInfo}>
+                <PhoneIcon className={classes.cardIcon} />
+                <Typography
+                  style={{ fontSize: "12px", fontWeight: 400 }}
+                  variant="body1"
+                >
+                  +47 918 71 787
+                </Typography>
+              </div>
+            }
             mail={"tobias@bmh.as "}
           />
         </Grid>
         <Grid item className={classes.cardContainer}>
           <EmployeeCard
-            name={"-----"}
+            name={"Mathias Larsen"}
             stilling={"Tømrer"}
             tlf={""}
-            mail={"tets@test.com"}
+            mail={"mathias@bmh.as"}
           />
         </Grid>
       </Grid>

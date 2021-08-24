@@ -4,7 +4,6 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Toolbar from "@material-ui/core/Toolbar";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -138,7 +137,7 @@ export default function MobileDrawer() {
         </Link>
         <Link to={"/about"} className="nav-link" onClick={handleDrawerClose}>
           <ListItem button>
-            <ListItemText>Om oss</ListItemText>
+            <ListItemText>Våre ansatte</ListItemText>
           </ListItem>
         </Link>
         <Link to={"/projects"} className="nav-link" onClick={handleDrawerClose}>

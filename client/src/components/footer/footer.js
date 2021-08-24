@@ -5,7 +5,6 @@ import { Typography } from "@material-ui/core";
 
 import Ansvarsrett from "../../images/ansvarsrett.png";
 import Byggmester from "../../images/byggmester.png";
-import Vaatrom from "../../images/vaatrom.png";
 import Lærling from "../../images/lærling.png";
 import MailIcon from "@material-ui/icons/Mail";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -30,14 +29,15 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     marginRight: "2rem",
     [theme.breakpoints.down("sm")]: {
-      margin: 0,
-      padding: 0,
+      margin: "0",
+      padding: "0",
+      paddingTop: "16px",
     },
   },
   brand: {
     paddingLeft: "2rem",
     [theme.breakpoints.down("sm")]: {
-      padding: "0px",
+      padding: "16px",
     },
   },
   footerImages: {
@@ -88,13 +88,6 @@ export default function Footer() {
         </div>
         <div style={{ marginTop: "auto", marginBottom: "auto" }}>
           <ul className={classes.brands}>
-            <li className={classes.brand}>
-              <img
-                src={Vaatrom}
-                alt="Våtrom"
-                className={classes.footerImages}
-              />
-            </li>
             <li className={classes.brand}>
               <img
                 src={Lærling}
