@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import LandingPhoto from "../../images/bil-bakgrunn-2.jpg";
-/* import LandingPhoto1 from "../../images/bil.jpg"; */
 import { makeStyles } from "@material-ui/core/styles";
 import LandingCard from "./landingCard";
 import projectImage from "../projects/ProjectImages/husoy/20210817_094301.jpg";
@@ -24,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: "70vh",
       width: "100%",
-      /* backgroundImage: `url(${LandingPhoto})`, */
     },
   },
 
