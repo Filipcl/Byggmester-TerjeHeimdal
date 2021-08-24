@@ -1,15 +1,20 @@
 const express = require("express");
 const nodeMailer = require("nodemailer");
-const path = require("path");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
 require("dotenv").config();
 
 const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 //Node mailer setup
 app.post("/api/form", (req, res) => {
   let data = req.body;
   let smtpTransport = nodeMailer.createTransport({
-    host: "https://bmh.as",
+    host: " https://bhm-mailserver.herokuapp.com/",
     service: "Outlook",
     port: process.env.EMAIL_PORT,
     auth: {
@@ -47,13 +52,13 @@ app.post("/api/form", (req, res) => {
   });
 });
 
-if (process.env.NODE_ENV === "production") {
+/* if (process.env.NODE_ENV === "production") {
   // set static folder
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
-}
+} */
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
