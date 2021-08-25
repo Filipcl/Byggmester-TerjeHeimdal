@@ -160,8 +160,8 @@ export default function SimpleContainer() {
           <br />
           <br />
           Byggmester Terje Heimdal har Sentral godkjenning for ansvarsrett, og
-          lærling bedrift. Vi har kontinuerlig nye lærlinger hos oss, for å
-          sikre fremtidig rekruttering til tømrerfaget.
+          er en lærling bedrift. Vi har kontinuerlig nye lærlinger hos oss, for
+          å sikre fremtidig rekruttering til tømrerfaget.
         </Typography>
       </Grid>
       <Grid
