@@ -14,8 +14,6 @@ import ansatt3 from "../../images/ansatte/ansatt3.JPG";
 import Mathias from "../../images/ansatte/mathias.jpg";
 import EmployeeCard from "./card";
 
-import "./about.css";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
