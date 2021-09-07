@@ -11,6 +11,7 @@ import Nikolai from "../../images/ansatte/nikolai.jpg";
 import ansatt1 from "../../images/ansatte/ansatt1.JPG";
 import ansatt2 from "../../images/ansatte/ansatt2.JPG";
 import ansatt3 from "../../images/ansatte/ansatt3.JPG";
+import Mathias from "../../images/ansatte/mathias.jpg";
 import EmployeeCard from "./card";
 
 import "./about.css";
@@ -177,9 +178,20 @@ export default function About() {
         </Grid>
         <Grid item className={classes.cardContainer}>
           <EmployeeCard
+            img={Mathias}
             name={"Mathias Larsen"}
             stilling={"Tømrer"}
-            tlf={""}
+            tlf={
+              <div className={classes.cardInfo}>
+                <PhoneIcon className={classes.cardIcon} />
+                <Typography
+                  style={{ fontSize: "12px", fontWeight: 400 }}
+                  variant="body1"
+                >
+                  +47 417 60 382
+                </Typography>
+              </div>
+            }
             mail={"mathias@bmh.as"}
           />
         </Grid>
