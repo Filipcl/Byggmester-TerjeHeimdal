@@ -62,7 +62,13 @@ function Navbar() {
         <Toolbar>
           <div className={classes.navbar}>
             <Link className={classes.navLogo} to={"/"} id="home-link">
-              <img className="logo" src={logo} alt="test" />
+              <img
+                className="logo"
+                src={logo}
+                alt="test"
+                width="auto"
+                height="auto"
+              />
             </Link>
             <div className={classes.burger}>
               <MobileDrawer />

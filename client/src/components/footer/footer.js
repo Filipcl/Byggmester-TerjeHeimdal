@@ -92,6 +92,8 @@ export default function Footer() {
               <img
                 src={Lærling}
                 alt="lærling"
+                width="auto"
+                height="70px"
                 className={classes.footerImages}
               />
             </li>
@@ -99,6 +101,8 @@ export default function Footer() {
               <img
                 src={Ansvarsrett}
                 alt="ansvarsrett"
+                width="auto"
+                height="70px"
                 className={classes.footerImages}
               />
             </li>
@@ -106,6 +110,8 @@ export default function Footer() {
               <img
                 src={Byggmester}
                 alt="Byggmester"
+                width="auto"
+                height="70px"
                 className={classes.footerImages}
               />
             </li>
