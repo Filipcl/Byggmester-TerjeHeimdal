@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
 import LandingPage from "./components/landingPage/landing";
 import Footer from "./components/footer/footer";
@@ -29,7 +29,6 @@ function App() {
           <Route path="/projectTwo" component={ProjectTwo} />
           <Route path="/projectThree" component={ProjectThree} />
           <Route path="/projectFour" component={ProjectFour} />
-          <Route path="*" component={NotFound} />
         </Switch>
         <Footer />
       </Router>
