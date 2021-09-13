@@ -29,7 +29,7 @@ function App() {
           <Route path="/projectTwo" component={ProjectTwo} />
           <Route path="/projectThree" component={ProjectThree} />
           <Route path="/projectFour" component={ProjectFour} />
-          <Route component={NotFound} />
+          <Route path="*" component={NotFound} />
         </Switch>
         <Footer />
       </Router>
