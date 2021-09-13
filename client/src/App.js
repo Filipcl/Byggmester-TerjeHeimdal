@@ -12,6 +12,7 @@ import ProjectTwo from "./components/projects/projectPages/projectTwo";
 import ProjectThree from "./components/projects/projectPages/projectThree";
 import ProjectFour from "./components/projects/projectPages/projectFour";
 import ScrollToTop from "./customHook/scrollToTop";
+import NotFound from "./components/notFound";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/projectTwo" component={ProjectTwo} />
           <Route path="/projectThree" component={ProjectThree} />
           <Route path="/projectFour" component={ProjectFour} />
+          <Route component={NotFound} />
         </Switch>
         <Footer />
       </Router>
