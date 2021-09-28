@@ -236,7 +236,13 @@ export default function MobileForm(props) {
             <span
               style={{ color: "#fff", marginLeft: "10px", fontWeight: "300" }}
             >
-              post@bmh.no
+              <a
+                style={{ color: "#fff", marginLeft: "10px", fontWeight: "300" }}
+                className="nav-link"
+                href="mailto:post@bmh.as"
+              >
+                post@bmh.as
+              </a>
             </span>
           </li>
           <li className={classes.listItem}>

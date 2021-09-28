@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     textTransform: "none",
     boxShadow: "none",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       height: "auto",
     },
   },

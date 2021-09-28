@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
   contentContainer: {
     textAlign: "start",
     margin: "0px 32px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "0px 8px",
+    },
   },
   buttonContainer: {
     display: "flex",

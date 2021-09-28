@@ -5,6 +5,8 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import { TotData } from "../data/totData";
 import BackButton from "../projectComponents/backButton";
 import { SRLWrapper } from "simple-react-lightbox";
+import { Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,6 +46,15 @@ export default function ProjectTwo() {
   return (
     <div className={classes.root}>
       <SRLWrapper>
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography variant="h4">Hytte i Drøbak</Typography>
+            <Typography variant="body1" style={{ padding: "24px 0px" }}>
+              Trykk på et bilde for galleri-modus
+            </Typography>
+            <hr style={{ color: "#422776", width: "80%" }} />
+          </Grid>
+        </Grid>
         <ImageList className={classes.imageList} gap={64} cols={4}>
           {TotData.map((item) => (
             <ImageListItem

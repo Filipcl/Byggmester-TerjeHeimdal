@@ -5,6 +5,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import { Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,7 +39,18 @@ export default function MediaCard(props) {
       <CardMedia className={classes.media} image={props.img} />
       <CardContent className={classes.cardContent}>
         <Link to={props.linkTo} style={{ textDecoration: "none" }}>
-          <Button fullWidth variant="contained" className={classes.btn}>
+          <Button
+            fullWidth
+            variant="contained"
+            className={classes.btn}
+            startIcon={
+              <ChevronRightIcon
+                style={{
+                  color: "#fff",
+                }}
+              />
+            }
+          >
             {props.title}
           </Button>
         </Link>

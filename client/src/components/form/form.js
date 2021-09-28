@@ -74,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     alignItems: "flex-start",
   },
+
   submit: {
     position: "relative",
     maxWidth: "150px",
@@ -153,10 +154,14 @@ export default function ContactForm(props) {
             <span>
               <MailIcon style={{ fontSize: "30px", color: "#fff" }} />
             </span>
-            <span
-              style={{ color: "#fff", marginLeft: "10px", fontWeight: "300" }}
-            >
-              post@bmh.no
+            <span>
+              <a
+                style={{ color: "#fff", marginLeft: "10px", fontWeight: "300" }}
+                className="nav-link"
+                href="mailto:post@bmh.as"
+              >
+                post@bmh.as
+              </a>
             </span>
           </li>
           <li className={classes.listItem}>
@@ -187,7 +192,13 @@ export default function ContactForm(props) {
               paddingTop: "30px",
             }}
           >
-            <Grid style={{ postion: "relative", marginBottom: "35px" }}>
+            <Grid
+              style={{
+                postion: "relative",
+                marginBottom: "35px",
+                width: "350px",
+              }}
+            >
               <TextField
                 className={classes.margin}
                 id="input-with-icon-textfield"
@@ -208,7 +219,13 @@ export default function ContactForm(props) {
                 }}
               />
             </Grid>
-            <Grid style={{ postion: "relative", marginBottom: "35px" }}>
+            <Grid
+              style={{
+                postion: "relative",
+                marginBottom: "35px",
+                width: "350px",
+              }}
+            >
               <TextField
                 className={classes.margin}
                 id="input-with-icon-textfield"
@@ -226,7 +243,13 @@ export default function ContactForm(props) {
                 }}
               />
             </Grid>
-            <Grid style={{ postion: "relative", marginBottom: "35px" }}>
+            <Grid
+              style={{
+                postion: "relative",
+                marginBottom: "35px",
+                width: "350px",
+              }}
+            >
               <TextField
                 className={classes.margin}
                 id="input-with-icon-textfield"
@@ -244,7 +267,13 @@ export default function ContactForm(props) {
                 }}
               />
             </Grid>
-            <Grid style={{ postion: "relative", marginBottom: "35px" }}>
+            <Grid
+              style={{
+                postion: "relative",
+                marginBottom: "35px",
+                width: "350px",
+              }}
+            >
               <TextField
                 className={classes.margin}
                 id="input-with-icon-textfield"
@@ -288,7 +317,7 @@ export default function ContactForm(props) {
                 <Alert severity={isError ? "warning" : "success"}>
                   {isError
                     ? "Ops, noe gikk galt fra vår side.. Ring oss isted"
-                    : "Meldingen ble sendt"}
+                    : "Takk for din henvendelse"}
                 </Alert>
               </div>
             </Grid>

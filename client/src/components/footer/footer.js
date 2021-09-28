@@ -75,8 +75,8 @@ export default function Footer() {
         <div className={classes.footerIcons}>
           <div className={classes.FooterInfo}>
             <MailIcon className={classes.FooterIcon} />
-            <a className="nav-link" href="mailto:post@bmh.no">
-              post@bmh.no
+            <a className="nav-link" href="mailto:post@bmh.as">
+              post@bmh.as
             </a>
           </div>
           <div className={classes.FooterInfo}>

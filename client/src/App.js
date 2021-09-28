@@ -12,7 +12,6 @@ import ProjectTwo from "./components/projects/projectPages/projectTwo";
 import ProjectThree from "./components/projects/projectPages/projectThree";
 import ProjectFour from "./components/projects/projectPages/projectFour";
 import ScrollToTop from "./customHook/scrollToTop";
-import NotFound from "./components/notFound";
 
 function App() {
   return (

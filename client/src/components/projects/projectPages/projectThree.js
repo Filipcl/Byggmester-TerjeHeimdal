@@ -5,6 +5,8 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import { husoyData } from "../data/husoyData";
 import BackButton from "../projectComponents/backButton";
 import { SRLWrapper } from "simple-react-lightbox";
+import { Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,6 +45,15 @@ export default function ProjectThree() {
   return (
     <div className={classes.root}>
       <SRLWrapper>
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography variant="h4">Enebolig på Husøy</Typography>
+            <Typography variant="body1" style={{ padding: "24px 0px" }}>
+              Trykk på et bilde for galleri-modus
+            </Typography>
+            <hr style={{ color: "#422776", width: "80%" }} />
+          </Grid>
+        </Grid>
         <ImageList className={classes.imageList} gap={64} cols={4}>
           {husoyData.map((item) => (
             <ImageListItem
