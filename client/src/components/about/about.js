@@ -102,7 +102,7 @@ export default function About() {
           <EmployeeCard
             img={ansatt1}
             name={"Remi Alvestad"}
-            stilling={"Tømrer"}
+            stilling={"Tømrer med fagbrev"}
             tlf={
               <div className={classes.cardInfo}>
                 <PhoneIcon className={classes.cardIcon} />
@@ -159,7 +159,7 @@ export default function About() {
           <EmployeeCard
             img={ansatt3}
             name={"Tobias Sakariassen "}
-            stilling={"Tømrer"}
+            stilling={"Tømrer med fagbrev"}
             tlf={
               <div className={classes.cardInfo}>
                 <PhoneIcon className={classes.cardIcon} />
@@ -178,7 +178,7 @@ export default function About() {
           <EmployeeCard
             img={Mathias}
             name={"Mathias Larsen"}
-            stilling={"Tømrer"}
+            stilling={"Tømrer med fagbrev"}
             tlf={
               <div className={classes.cardInfo}>
                 <PhoneIcon className={classes.cardIcon} />
